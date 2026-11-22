@@ -1,5 +1,5 @@
 /**
- *  Copyright 2014 Ryszard Wiśniewski <brut.alll@gmail.com>
+ *  Copyright 2014 Ryszard Wi?niewski <brut.alll@gmail.com>
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  */
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
@@ -48,7 +48,7 @@ allprojects {
         strictCheck true
 
         ext.year = Calendar.getInstance().get(Calendar.YEAR)
-        ext.brut = 'Ryszard Wiśniewski'
+        ext.brut = 'Ryszard Wi?niewski'
         ext.brutEmail = 'brut.alll@gmail.com'
         ext.ibot = 'Connor Tumbleson'
         ext.ibotEmail = 'connor.tumbleson@gmail.com'
@@ -130,4 +130,9 @@ subprojects {
             exceptionFormat = 'full'
         }
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }

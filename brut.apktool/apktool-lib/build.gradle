@@ -1,5 +1,5 @@
 /**
- *  Copyright 2014 Ryszard Wiśniewski <brut.alll@gmail.com>
+ *  Copyright 2014 Ryszard Wi?niewski <brut.alll@gmail.com>
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ dependencies {
         exclude(module: 'hamcrest-core')
     }
 
-    compile project(':brut.j.dir'),
+    implementation project(':brut.j.dir'),
             project(':brut.j.util'),
             project(':brut.j.common'),
             depends.baksmali,
@@ -43,5 +43,5 @@ dependencies {
             depends.guava,
             depends.commons_lang
 
-    testCompile depends.xmlunit
+    testImplementation depends.xmlunit
 }
